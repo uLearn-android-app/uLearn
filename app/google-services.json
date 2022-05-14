@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "710498446240",
+    "firebase_url": "https://ulearn-ea4f6-default-rtdb.firebaseio.com",
+    "project_id": "ulearn-ea4f6",
+    "storage_bucket": "ulearn-ea4f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710498446240:android:614a06bd0fcb75480c92c5",
+        "android_client_info": {
+          "package_name": "com.example.ulearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710498446240-rnqgit0hlcvq1vjrbd1ctjggkk20g1um.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtEP8hD6k8diJcR4Jo86VF1yC8kxW_blg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710498446240-rnqgit0hlcvq1vjrbd1ctjggkk20g1um.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

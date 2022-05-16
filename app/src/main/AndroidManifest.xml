@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ULearn">
         <activity
+            android:name=".FiveUnitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThreeUnitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomePageActivity"
+            android:exported="false" />
+        <activity
             android:name=".WebPageActivity"
             android:exported="false" />
         <activity

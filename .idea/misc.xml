@@ -18,10 +18,13 @@
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/drawable/ic_myback.xml" value="0.2265" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/drawable/ic_person.xml" value="0.2555" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
+        <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/layout/activity_five_unit.xml" value="0.20405405405405405" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/layout/activity_home_page.xml" value="0.21621621621621623" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
+        <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/layout/activity_three_unit.xml" value="0.20405405405405405" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/layout/activity_update_email.xml" value="0.2" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/layout/activity_update_password.xml" value="0.2" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/layout/activity_web_page.xml" value="0.21621621621621623" />
@@ -31,6 +34,7 @@
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/menu/main.xml" value="0.21244444444444444" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/menu/main2.xml" value="0.1" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/menu/main_activity2.xml" value="0.2" />
+        <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/menu/menu.xml" value="0.21621621621621623" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/menu/theory_videos.xml" value="0.264" />
         <entry key="..\:/My-Apps/MAD-Project/uLearn/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.145" />
       </map>

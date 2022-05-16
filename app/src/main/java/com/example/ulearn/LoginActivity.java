@@ -37,10 +37,11 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.login_progress);
 
         mAuth = FirebaseAuth.getInstance();
-//        if(mAuth.getCurrentUser() != null){
-//            finish();
-//            return;
-//        }
+        if(mAuth.getCurrentUser() != null){
+            showHomeActivity();
+            finish();
+            return;
+        }
 
         lgn_btn = findViewById(R.id.login_btn);
         go_to_signup = findViewById(R.id.go_to_signup);

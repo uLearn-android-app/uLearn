@@ -1,81 +1,1097 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePageActivity">
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:scrollbarSize="5dp">
 
-    <Button
-        android:id="@+id/Machine_Learning"
-        android:layout_width="143dp"
-        android:layout_height="117dp"
-        android:text="Machine Learning"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_lay"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:paddingTop="32dp"
+        android:scrollY="@dimen/cardview_default_elevation"
+        android:scrollbarStyle="insideInset"
+        tools:context=".HomePageActivity">
 
-    <Button
-        android:id="@+id/Computer_Networks"
-        android:layout_width="143dp"
-        android:layout_height="117dp"
-        android:text="Computer Networks"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
 
-    <Button
-        android:id="@+id/Computer_Graphics"
-        android:layout_width="143dp"
-        android:layout_height="117dp"
-        android:text="Computer Graphics"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="16dp">
 
-    <Button
-        android:id="@+id/FormalLanguage_AutomataTheory"
-        android:layout_width="143dp"
-        android:layout_height="117dp"
-        android:text="Formal Language and Automata Theory"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/app_icon" />
 
-    <Button
-        android:id="@+id/Cloud_Computing"
-        android:layout_width="143dp"
-        android:layout_height="117dp"
-        android:text="Cloud Computing"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.604" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/amiko"
+                android:padding="10dp"
+                android:text="U-Learn"
+                android:textColor="#D21E88E5"
+                android:textSize="44sp" />
 
-    <Button
-        android:id="@+id/Cryptography"
-        android:layout_width="159dp"
-        android:layout_height="117dp"
-        android:text="Cryptography"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.604" />
+        </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/machine_learning_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Media -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="194dp"
+                    android:contentDescription="Machine Learning"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ml" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="Machine Learning"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Machine learning is a field of inquiry devoted to understanding and building methods that 'learn', that is, methods that leverage data to improve performance on some set of tasks."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/ml_explore"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Explore"
+                        android:textColor="#D21E88E5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cryptography_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/machine_learning_card"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Media -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="194dp"
+                    android:contentDescription="Machine Learning"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/crypto" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="Cryptography"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Cryptography, or cryptology, is the practice and study of techniques for secure communication in the presence of adversarial behavior"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/crypto_explore"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Explore"
+                        android:textColor="#D21E88E5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/computer_networks_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cryptography_card"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Media -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="194dp"
+                    android:contentDescription="Machine Learning"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/computer_networks" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="Computer Networks"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Computer Networks deals with the study of how computers can be interconnected with each other and how they operate under such a setting"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cn_explore"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Explore"
+                        android:textColor="#D21E88E5" />
+
+                </LinearLayout>
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/computer_graphics_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/computer_networks_card"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Media -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="194dp"
+                    android:contentDescription="Machine Learning"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/cg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="Computer Graphics"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Computer graphics deals with generating images with the aid of computers. Today, computer graphics is a core technology in digital photography, film, video games, cell phone and computer displays, and many specialized applications."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cg_explore"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Explore"
+                        android:textColor="#D21E88E5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/flat_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/computer_graphics_card"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Media -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="194dp"
+                    android:contentDescription="Machine Learning"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/flat" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="Theory of Computation"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="In theoretical computer science and mathematics, the theory of computation is the branch that deals with what problems can be solved on a model of computation, using an algorithm, how efficiently they can be solved or to what degree."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/flat_explore"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Explore"
+                        android:textColor="#D21E88E5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cloud_computing_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/flat_card"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Media -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="194dp"
+                    android:contentDescription="Machine Learning"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/cloud_computing" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="Cloud Computing"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user."
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cc_explore"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Explore"
+                        android:textColor="#D21E88E5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <Button
+            android:id="@+id/Machine_Learning"
+            android:layout_width="125dp"
+            android:layout_height="78dp"
+            android:text="Machine Learning"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+
+        <Button
+            android:id="@+id/Computer_Networks"
+            android:layout_width="133dp"
+            android:layout_height="49dp"
+            android:text="Computer Networks"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.904"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+
+        <Button
+            android:id="@+id/Computer_Graphics"
+            android:layout_width="146dp"
+            android:layout_height="48dp"
+            android:text="Computer Graphics"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.163" />
+
+        <Button
+            android:id="@+id/FormalLanguage_AutomataTheory"
+            android:layout_width="132dp"
+            android:layout_height="48dp"
+            android:text="Formal Language and Automata Theory"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.153" />
+
+
+        <Button
+            android:id="@+id/Cloud_Computing"
+            android:layout_width="112dp"
+            android:layout_height="48dp"
+            android:text="Cloud Computing"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.259" />
+
+        <Button
+            android:id="@+id/Cryptography"
+            android:layout_width="147dp"
+            android:layout_height="48dp"
+            android:text="Cryptography"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.236" />
+
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/machine_learning_card"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginTop="40dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:cardCornerRadius="10dp"-->
+        <!--            app:cardElevation="5dp"-->
+        <!--            app:cardUseCompatPadding="true"-->
+        <!--            app:contentPadding="0dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.0"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"-->
+        <!--            app:strokeWidth="0dp">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--                &lt;!&ndash; Media &ndash;&gt;-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="194dp"-->
+        <!--                    android:contentDescription="Machine Learning"-->
+        <!--                    android:scaleType="centerCrop"-->
+        <!--                    app:srcCompat="@drawable/ml" />-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical"-->
+        <!--                    android:padding="16dp">-->
+
+        <!--                    &lt;!&ndash; Title, secondary and supporting text &ndash;&gt;-->
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Machine Learning"-->
+        <!--                        android:textAppearance="?attr/textAppearanceHeadline6"-->
+        <!--                        android:textSize="24sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Machine learning is a field of inquiry devoted to understanding and building methods that 'learn', that is, methods that leverage data to improve performance on some set of tasks."-->
+        <!--                        android:textAppearance="?attr/textAppearanceBody2"-->
+        <!--                        android:textColor="?android:attr/textColorSecondary" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--                &lt;!&ndash; Buttons &ndash;&gt;-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_margin="8dp"-->
+        <!--                    android:orientation="horizontal">-->
+
+        <!--                    <com.google.android.material.button.MaterialButton-->
+        <!--                        android:id="@+id/ml_explore"-->
+        <!--                        style="?attr/borderlessButtonStyle"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginEnd="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Explore"-->
+        <!--                        android:textColor="#D21E88E5" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/cryptography_card"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginTop="24dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:cardCornerRadius="10dp"-->
+        <!--            app:cardElevation="5dp"-->
+        <!--            app:cardUseCompatPadding="true"-->
+        <!--            app:contentPadding="0dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/machine_learning_card"-->
+        <!--            app:strokeWidth="0dp">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--                &lt;!&ndash; Media &ndash;&gt;-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="194dp"-->
+        <!--                    android:contentDescription="Machine Learning"-->
+        <!--                    android:scaleType="centerCrop"-->
+        <!--                    app:srcCompat="@drawable/crypto" />-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical"-->
+        <!--                    android:padding="16dp">-->
+
+        <!--                    &lt;!&ndash; Title, secondary and supporting text &ndash;&gt;-->
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Cryptography"-->
+        <!--                        android:textAppearance="?attr/textAppearanceHeadline6"-->
+        <!--                        android:textSize="24sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Cryptography, or cryptology, is the practice and study of techniques for secure communication in the presence of adversarial behavior"-->
+        <!--                        android:textAppearance="?attr/textAppearanceBody2"-->
+        <!--                        android:textColor="?android:attr/textColorSecondary" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--                &lt;!&ndash; Buttons &ndash;&gt;-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_margin="8dp"-->
+        <!--                    android:orientation="horizontal">-->
+
+        <!--                    <com.google.android.material.button.MaterialButton-->
+        <!--                        android:id="@+id/crypto_explore"-->
+        <!--                        style="?attr/borderlessButtonStyle"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginEnd="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Explore"-->
+        <!--                        android:textColor="#D21E88E5" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/computer_networks_card"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginTop="24dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:cardCornerRadius="10dp"-->
+        <!--            app:cardElevation="5dp"-->
+        <!--            app:cardUseCompatPadding="true"-->
+        <!--            app:contentPadding="0dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/cryptography_card"-->
+        <!--            app:strokeWidth="0dp">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--                &lt;!&ndash; Media &ndash;&gt;-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="194dp"-->
+        <!--                    android:contentDescription="Machine Learning"-->
+        <!--                    android:scaleType="centerCrop"-->
+        <!--                    app:srcCompat="@drawable/computer_networks" />-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical"-->
+        <!--                    android:padding="16dp">-->
+
+        <!--                    &lt;!&ndash; Title, secondary and supporting text &ndash;&gt;-->
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Computer Networks"-->
+        <!--                        android:textAppearance="?attr/textAppearanceHeadline6"-->
+        <!--                        android:textSize="24sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Computer Networks deals with the study of how computers can be interconnected with each other and how they operate under such a setting"-->
+        <!--                        android:textAppearance="?attr/textAppearanceBody2"-->
+        <!--                        android:textColor="?android:attr/textColorSecondary" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--                &lt;!&ndash; Buttons &ndash;&gt;-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_margin="8dp"-->
+        <!--                    android:orientation="horizontal">-->
+
+        <!--                    <com.google.android.material.button.MaterialButton-->
+        <!--                        android:id="@+id/cn_explore"-->
+        <!--                        style="?attr/borderlessButtonStyle"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginEnd="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Explore"-->
+        <!--                        android:textColor="#D21E88E5" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--                <com.google.android.material.bottomnavigation.BottomNavigationView-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="match_parent" />-->
+
+        <!--            </LinearLayout>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/computer_graphics_card"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginTop="24dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:cardCornerRadius="10dp"-->
+        <!--            app:cardElevation="5dp"-->
+        <!--            app:cardUseCompatPadding="true"-->
+        <!--            app:contentPadding="0dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/computer_networks_card"-->
+        <!--            app:strokeWidth="0dp">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--                &lt;!&ndash; Media &ndash;&gt;-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="194dp"-->
+        <!--                    android:contentDescription="Machine Learning"-->
+        <!--                    android:scaleType="centerCrop"-->
+        <!--                    app:srcCompat="@drawable/cg" />-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical"-->
+        <!--                    android:padding="16dp">-->
+
+        <!--                    &lt;!&ndash; Title, secondary and supporting text &ndash;&gt;-->
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Computer Graphics"-->
+        <!--                        android:textAppearance="?attr/textAppearanceHeadline6"-->
+        <!--                        android:textSize="24sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Computer graphics deals with generating images with the aid of computers. Today, computer graphics is a core technology in digital photography, film, video games, cell phone and computer displays, and many specialized applications."-->
+        <!--                        android:textAppearance="?attr/textAppearanceBody2"-->
+        <!--                        android:textColor="?android:attr/textColorSecondary" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--                &lt;!&ndash; Buttons &ndash;&gt;-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_margin="8dp"-->
+        <!--                    android:orientation="horizontal">-->
+
+        <!--                    <com.google.android.material.button.MaterialButton-->
+        <!--                        android:id="@+id/cg_explore"-->
+        <!--                        style="?attr/borderlessButtonStyle"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginEnd="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Explore"-->
+        <!--                        android:textColor="#D21E88E5" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/flat_card"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginTop="24dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:cardCornerRadius="10dp"-->
+        <!--            app:cardElevation="5dp"-->
+        <!--            app:cardUseCompatPadding="true"-->
+        <!--            app:contentPadding="0dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/computer_graphics_card"-->
+        <!--            app:strokeWidth="0dp">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--                &lt;!&ndash; Media &ndash;&gt;-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="194dp"-->
+        <!--                    android:contentDescription="Machine Learning"-->
+        <!--                    android:scaleType="centerCrop"-->
+        <!--                    app:srcCompat="@drawable/flat" />-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical"-->
+        <!--                    android:padding="16dp">-->
+
+        <!--                    &lt;!&ndash; Title, secondary and supporting text &ndash;&gt;-->
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Theory of Computation"-->
+        <!--                        android:textAppearance="?attr/textAppearanceHeadline6"-->
+        <!--                        android:textSize="24sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="In theoretical computer science and mathematics, the theory of computation is the branch that deals with what problems can be solved on a model of computation, using an algorithm, how efficiently they can be solved or to what degree."-->
+        <!--                        android:textAppearance="?attr/textAppearanceBody2"-->
+        <!--                        android:textColor="?android:attr/textColorSecondary" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--                &lt;!&ndash; Buttons &ndash;&gt;-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_margin="8dp"-->
+        <!--                    android:orientation="horizontal">-->
+
+        <!--                    <com.google.android.material.button.MaterialButton-->
+        <!--                        android:id="@+id/flat_explore"-->
+        <!--                        style="?attr/borderlessButtonStyle"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginEnd="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Explore"-->
+        <!--                        android:textColor="#D21E88E5" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/cloud_computing_card"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginTop="24dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:layout_marginBottom="32dp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:cardCornerRadius="10dp"-->
+        <!--            app:cardElevation="5dp"-->
+        <!--            app:cardUseCompatPadding="true"-->
+        <!--            app:contentPadding="0dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/flat_card"-->
+        <!--            app:strokeWidth="0dp">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--                &lt;!&ndash; Media &ndash;&gt;-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="194dp"-->
+        <!--                    android:contentDescription="Machine Learning"-->
+        <!--                    android:scaleType="centerCrop"-->
+        <!--                    app:srcCompat="@drawable/cloud_computing" />-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical"-->
+        <!--                    android:padding="16dp">-->
+
+        <!--                    &lt;!&ndash; Title, secondary and supporting text &ndash;&gt;-->
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Cloud Computing"-->
+        <!--                        android:textAppearance="?attr/textAppearanceHeadline6"-->
+        <!--                        android:textSize="24sp" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user."-->
+        <!--                        android:textAppearance="?attr/textAppearanceBody2"-->
+        <!--                        android:textColor="?android:attr/textColorSecondary" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--                &lt;!&ndash; Buttons &ndash;&gt;-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_margin="8dp"-->
+        <!--                    android:orientation="horizontal">-->
+
+        <!--                    <com.google.android.material.button.MaterialButton-->
+        <!--                        android:id="@+id/cc_explore"-->
+        <!--                        style="?attr/borderlessButtonStyle"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginEnd="8dp"-->
+        <!--                        android:fontFamily="@font/amiko"-->
+        <!--                        android:text="Explore"-->
+        <!--                        android:textColor="#D21E88E5" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

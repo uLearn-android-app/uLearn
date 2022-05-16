@@ -18,12 +18,12 @@ public class HomePageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        ml=(Button) findViewById(R.id.Machine_Learning);
-        cn=(Button) findViewById(R.id.Computer_Networks);
-        cg=(Button) findViewById(R.id.Computer_Graphics);
-        flat=(Button) findViewById(R.id.FormalLanguage_AutomataTheory);
-        cc=(Button) findViewById(R.id.Cloud_Computing);
-        cns=(Button) findViewById(R.id.Cryptography);
+        ml=(Button) findViewById(R.id.ml_explore);
+        cn=(Button) findViewById(R.id.cn_explore);
+        cg=(Button) findViewById(R.id.cg_explore);
+        flat=(Button) findViewById(R.id.flat_explore);
+        cc=(Button) findViewById(R.id.cc_explore);
+        cns=(Button) findViewById(R.id.crypto_explore);
         ml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

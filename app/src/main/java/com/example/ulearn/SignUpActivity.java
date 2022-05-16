@@ -119,6 +119,8 @@ public class SignUpActivity extends AppCompatActivity {
                 DatabaseReference rootref = fdbase.getReference();
                 DatabaseReference nameref = rootref.child("Users").child(user.getUid()).child("Name");
                 nameref.setValue(myName);
+                DatabaseReference mailref = rootref.child("Users").child(user.getUid()).child("Email");
+                mailref.setValue(myEmail);
             }
 
         });

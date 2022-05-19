@@ -79,7 +79,7 @@ public class UpdateEmailActivity extends AppCompatActivity {
                                 });
                     }
                     else{
-                        new_email_lay.setError("E-nail ID invalid!");
+                        new_email_lay.setError("E-mail ID invalid!");
                     }
                 }
                 else{

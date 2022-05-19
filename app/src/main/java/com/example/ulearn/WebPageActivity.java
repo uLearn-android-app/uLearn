@@ -32,14 +32,14 @@ public class WebPageActivity extends AppCompatActivity {
                 switch(unitname)
                 {
                     case "unit1": //url="https://drive.google.com/drive/folders/1Z7y-zIOO494I71FozzCcnhUsBgiafotZ?usp=sharing";
-                        //break;
+                       // break;
                     case "unit2": //url="https://drive.google.com/drive/folders/1rwuW6xateAX-gChGDT_p-TrsiRYQ4FpH?usp=sharing";
-                        //break;
+                       // break;
                     case "unit3": //url="https://drive.google.com/drive/folders/1SXLZnwvukqVR1ExuiFZy0-aE5d0e9AMz?usp=sharing";
-                        //break;
+                       // break;
                     case "unit4": //url="https://drive.google.com/drive/folders/1B1JOvRnE1SOjlAyF8cBddafRZQjNYkb2?usp=sharing";
-//                        break;
-                    case "unit5": //url="https://drive.google.com/drive/folders/1GFUq4F3q1ewbF7fhsh7x91BCRQRI-gD5?usp=sharing";
+                        //break;
+                    case "unit5":// url="https://drive.google.com/drive/folders/1GFUq4F3q1ewbF7fhsh7x91BCRQRI-gD5?usp=sharing";
                         url = "https://www.geeksforgeeks.org/machine-learning/";
                         break;
                 }

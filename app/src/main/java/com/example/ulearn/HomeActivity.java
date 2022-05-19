@@ -10,8 +10,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -22,8 +24,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class HomeActivity extends AppCompatActivity {
+
+
     TextView helloUser,email;
     Button logOut,update_pass,update_email;
+    ImageView go_back;
     FirebaseAuth auth;
     FirebaseUser currentUser;
     Context context;
@@ -31,6 +36,19 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+
+
+        go_back = findViewById(R.id.go_back_to_home);
+
+        go_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),HomePageActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         auth = FirebaseAuth.getInstance();
         currentUser = auth.getCurrentUser();
@@ -44,10 +62,12 @@ public class HomeActivity extends AppCompatActivity {
             return;
         }
 
+
+
         helloUser = findViewById(R.id.hello_user);
         email = findViewById(R.id.user_email);
 
-        helloUser.setText("Hi, "+currentUser.getEmail()+"!");
+
 
         logOut = findViewById(R.id.logout);
         update_pass = findViewById(R.id.update_pass);
@@ -75,23 +95,41 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference reference = database.getReference("users").child(currentUser.getUid());
-//        reference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                User user = snapshot.getValue(User.class);
-//                if( user != null){
-//                    helloUser.setText("Username:"+user.username);
-//                    email.setText("Email:"+user.email);
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        DatabaseReference rootReference = database.getReference();
+
+        DatabaseReference nameReference = rootReference.child("Users").child(currentUser.getUid()).child("Name");
+        nameReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //snapshot will have {Name : "Value"}
+
+                helloUser.setText("Username : "+snapshot.getValue().toString());
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        DatabaseReference mailReference = rootReference.child("Users").child(currentUser.getUid()).child("Email");
+        mailReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                email.setText("E-Mail ID : "+ snapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
     }
 
     private void showUpdateEmailActivity() {

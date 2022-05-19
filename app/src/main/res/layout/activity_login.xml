@@ -27,6 +27,23 @@
             android:layout_marginTop="8dp"
             android:progressTint="#FFFFFF"
             android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            app:srcCompat="@drawable/book_icon_white" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="U-Learn"
+            android:textAlignment="center"
+            android:textColor="#f0f8ff"
+            android:textSize="54sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -45,9 +62,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="-15dp"
+            android:layout_marginBottom="0dp"
             android:fontFamily="@font/amiko"
             android:gravity="center"
             android:text="Login"

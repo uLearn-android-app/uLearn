@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -18,6 +19,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class UpdateEmailActivity extends AppCompatActivity {
+
+
+
     TextInputEditText new_email,old_email;
     TextInputLayout new_email_lay,old_email_lay;
     Button update_btn2;
@@ -27,7 +31,10 @@ public class UpdateEmailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_email);
+
+
+
+         setContentView(R.layout.activity_update_email);
 
         validate =new Validation(this);
 

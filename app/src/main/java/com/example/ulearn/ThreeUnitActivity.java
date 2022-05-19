@@ -12,9 +12,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
+
 public class ThreeUnitActivity extends AppCompatActivity {
 
-    TextView subjectName;
+
+    TextView subjectName,unit_number;
     Intent intent2,intent3;
     Button u1,u2,u3;
     int viewId;
@@ -23,15 +26,24 @@ public class ThreeUnitActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         setContentView(R.layout.activity_three_unit);
 
         subjectName=(TextView) findViewById(R.id.subjectName);
+        unit_number = findViewById(R.id.unitNumberText2);
         intent2=getIntent();
         subname=intent2.getStringExtra("SubjectName");
         subjectName.setText(subname);
+
+        unit_number.setText("This is a 3 unit course");
+
         u1=(Button) findViewById(R.id.unit1);
         u2=(Button) findViewById(R.id.unit2);
         u3=(Button) findViewById(R.id.unit3);
+
+
 
         registerForContextMenu(u1);
         registerForContextMenu(u2);

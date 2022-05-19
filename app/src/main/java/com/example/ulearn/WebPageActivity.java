@@ -51,7 +51,8 @@ public class WebPageActivity extends AppCompatActivity {
                     case "unit2":
                     case "unit3":
                     case "unit4":
-                    case "unit5": url="https://youtube.com/playlist?list=PLeo1K3hjS3uvCeTYTeyfe0-rN5r8zn9rw";
+                    case "unit5": //url="https://youtube.com/playlist?list=PLeo1K3hjS3uvCeTYTeyfe0-rN5r8zn9rw";
+                        url = "https://www.youtube.com/watch?v=GwIo3gDZCVQ&ab_channel=edureka%21";
                         break;
                 }
             }
@@ -79,10 +80,10 @@ public class WebPageActivity extends AppCompatActivity {
             {
                 switch(unitname)
                 {
-                    case "unit1": break;
-                    case "unit2": break;
-                    case "unit3": break;
-                    case "unit4": break;
+                    case "unit1":// break;
+                    case "unit2": //break;
+                    case "unit3": //break;
+                    case "unit4": //break;
                     case "unit5":
                         url = "https://youtube.com/playlist?list=PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx";
                         break;
@@ -101,7 +102,7 @@ public class WebPageActivity extends AppCompatActivity {
                     case "unit2": //url="https://drive.google.com/drive/folders/1K4u2SXX6KNQPdBVi448zFM0MCxENyq4h?usp=sharing";
                        // break;
                     case "unit3": //url="https://drive.google.com/drive/folders/1wGl0jjhsYr6EWPbyZAGr1wnMkGsQJP5l?usp=sharing";
-                        break;
+                        //break;
                     case "unit4": //url="https://drive.google.com/drive/folders/1YkNV7Z3dVYubLCh1RzyweWpe0jLjS3lN?usp=sharing";
                         //break;
                     case "unit5": //url="https://drive.google.com/drive/folders/10yN663l6ltXNhS8LpuDBanNiyu3xWsj2?usp=sharing";
@@ -113,10 +114,10 @@ public class WebPageActivity extends AppCompatActivity {
             {
                 switch(unitname)
                 {
-                    case "unit1": break;
-                    case "unit2": break;
-                    case "unit3": break;
-                    case "unit4": break;
+                    case "unit1": //break;
+                    case "unit2": //break;
+                    case "unit3":// break;
+                    case "unit4": //break;
                     case "unit5":
                         url = "https://youtube.com/playlist?list=PLYwpaL_SFmcAtxMe7ahYC4ZYjQHun_b-T";
                         break;
@@ -147,10 +148,10 @@ public class WebPageActivity extends AppCompatActivity {
             {
                 switch(unitname)
                 {
-                    case "unit1": break;
-                    case "unit2": break;
-                    case "unit3": break;
-                    case "unit4": break;
+                    case "unit1": //break;
+                    case "unit2":// break;
+                    case "unit3":// break;
+                    case "unit4":// break;
                     case "unit5":
                         url = "https://youtube.com/playlist?list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev";
                         break;
@@ -169,7 +170,7 @@ public class WebPageActivity extends AppCompatActivity {
                     case "unit2":// url="https://drive.google.com/drive/folders/1W0Bvf_DgiOrDJWyBeknojL0QEtN6LqP3?usp=sharing";
                        // break;
                     case "unit3":// url="https://drive.google.com/drive/folders/1WCM8Wm0yf25Zlhvu-dK5lIcyCUf7_1DM?usp=sharing";
-                        url = "https://www.tutorialspoint.com/cloud_computing/cloud_computing_tutorial.pdf";
+                        url = "https://aws.amazon.com/what-is-cloud-computing/";
                         break;
                 }
 
@@ -178,8 +179,8 @@ public class WebPageActivity extends AppCompatActivity {
             {
                 switch(unitname)
                 {
-                    case "unit1": break;
-                    case "unit2": break;
+                    case "unit1":// break;
+                    case "unit2": //break;
                     case "unit3":
                         url ="https://youtube.com/playlist?list=PLEiEAq2VkUUIJ3o1tehvtux0_Ynf42CBN";
                         break;
@@ -206,8 +207,8 @@ public class WebPageActivity extends AppCompatActivity {
             {
                 switch(unitname)
                 {
-                    case "unit1": break;
-                    case "unit2": break;
+                    case "unit1":// break;
+                    case "unit2":// break;
                     case "unit3":
                         url = "https://youtube.com/playlist?list=PLBlnK6fEyqRgJU3EsOYDTW7m6SUmW6kII";
                         break;
